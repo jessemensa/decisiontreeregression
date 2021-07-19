@@ -1,0 +1,41 @@
+Decision Tree Intuition, builds regression models in a form of a tree structure. 
+Breaks down a dataset into smaller and smaller subsets while at the same time an associated 
+decision tree is being developed, the final result is trees with decision nodes and 
+leaf nodes. 
+
+Visualise and draw a scatter plot that represents the dataset. 
+lets say the scatter plot has two independent variables x1 and x2 and 
+we are predicting the third variable which y.
+inorder to view y, visualise it in a 3rd dimension. 
+
+Also decision trees can be explained w one independent variable and one dependent variable. 
+
+but here using two independent variables. 
+
+Now run regression into scatter plot, its split scatter plot into segments 
+split 1, split 2, split 3, split 4. 
+how and why this splits are conducted is determined by the algorithm and this involves looking at 
+something called the information entropy. 
+simply means is any split in data point increasing or decreasing the amount of information we have 
+about the data points. is it actually adding some value to the way that we want to group our data 
+points or vice versa 
+Once the algorithm cannot add any more information through splitting the data points, it stops 
+splitting them. 
+
+Decision tree algo is just finding the optimal splits in dataset into leaves 
+
+
+Visualise drawing a new plot and start splitting 
+
+first split happened at 20, x1 < 20 => yes or no 
+split 2 happens at 170  and only happens to the pts that are greater than 20 , x2 < 170 
+split 3 happens at 300 less than 20 and checks if x2 < 300 
+split 4 happens at greater than 20 which is 40 and checks if x1 < 40 
+
+now lets say we add an observation which is x = 30 and x2 = 50 so it falls into a specific leaf 
+now how does that information help us interms of predicting the value of y 
+solution 
+take the averages of each of the terminal leafs 
+take the average of y for all of these points and that will be value that will be assigned to 
+any new pt that falls within this terminal leaf 
+
